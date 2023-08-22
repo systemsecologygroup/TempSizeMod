@@ -10,7 +10,9 @@ Trait-based models have been applied to investigate the effects of environmental
 
 
 ## Model description
-The size-based model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) framework (_sensu_ Fasham et al., 1990 and Armstrong, 1994) and is a differential equation-based model. The model contains different phytoplankton size classes ($P_i$) who are subject to grazing by two different-sized zooplankton ($Z_1$, $Z_2$). The phytoplankton growth is limited by light and nutrient and is dependent on temperature. 
+The size-based model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) framework (_sensu_ Fasham et al., 1990 and Armstrong, 1994) and is a differential equation-based model. The model contains different phytoplankton size classes ($P_i$) who are subject to grazing by two different-sized zooplankton ($Z_1$, $Z_2$). The phytoplankton growth is limited by light and nutrient, and is scaled by temperature dependence. 
+
+<img width="793" alt="Figure1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/759abedf-a7c0-407b-9fe9-07e244321370">
 
 The model focuses on capturing size-dependent bottom-up and top-down interactions through data-driven allometric relationships of phytoplankton growth and zooaplankton grazing. The model aims at studying changes in the size compositions of lake phytoplankton communities. 
 
