@@ -19,21 +19,21 @@ The model focuses on capturing size-dependent bottom-up and top-down interaction
 
 
 ## Allometric relationships in the model
-Based on multiple allometric equations, the model produce an ecological trade-off that favour specific phytoplantkon size classes at different environmental conditions.
+Based on multiple allometric equations, the model produce an ecological trade-off that favour a certain phytoplantkon size classes at different environmental conditions.
 
 The allometric relationships considered in the model are:
 
-$$\mu_{max}(S_i) = \beta_{\mu_{max}}\cdot (S_i)^{\alpha_{\mu_{max}}}$$
+$$\mu_{max}(S_i^P) = \beta_{\mu_{max}}\cdot (S_i^P)^{\alpha_{\mu_{max}}}$$
 
-$$K_n(S_i) = \beta_{K_n}\cdot (S_i)^{\alpha_{K_n}}$$
+$$K_n(S_i^P) = \beta_{K_n}\cdot (S_i^P)^{\alpha_{K_n}}$$
 
-$$T_{opt}(S_i) = \beta_{T_{opt}}\cdot (S_i)^{\alpha_{T_{opt}}}$$
+$$T_{opt}(S_i^P) = \beta_{T_{opt}}\cdot (S_i^P)^{\alpha_{T_{opt}}}$$
 
-$$I_{max}(S_j) = \beta_{I_{max}}\cdot (S_j)^{\alpha_{I_{max}}}$$
+$$I_{max}(S_j^Z) = \beta_{I_{max}}\cdot (S_j^Z)^{\alpha_{I_{max}}}$$
 
-$$P_{opt}(S_i, S_j) = \beta_{P_{opt}}\cdot (S_j)^{\alpha_{P_{opt}}}$$
+$$P_{opt}(S_i^P, S_j^Z) = \beta_{P_{opt}}\cdot (S_j^Z)^{\alpha_{P_{opt}}}$$
 
-representing, respectively, maximum growth rate, $\mu_{max}(S_i)$, half-saturation for nutrient uptake, $K_n(S_i)$, and thermal optima, $T_{opt}(S_i)$, for phytoplankton size class $i$, and maximum ingestion rate, $I_{max}(S_j)$, and optimal prey size, $P_{opt}(S_i, S_j)$, for zooplankton size class $j$.
+representing, respectively, maximum growth rate, $\mu_{max}(S_i^P)$, half-saturation for nutrient uptake, $K_n(S_i^P)$, and thermal optima, $T_{opt}(S_i^P)$, for phytoplankton size class $i$, and maximum ingestion rate, $I_{max}(S_j^Z)$, and optimal prey size, $P_{opt}(S_i^P, S_j^Z)$, for zooplankton size class $j$.
 
 
 
