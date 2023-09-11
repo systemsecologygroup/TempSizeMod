@@ -10,7 +10,7 @@ Trait-based models have been applied to investigate the effects of environmental
 
 
 ## Model description
-The size-based model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) framework (_sensu_ Fasham et al., 1990 and Armstrong, 1994) and is a differential equation-based model. The model includes one nutrient source, phosphorus $PO_4^{3-}$, available for uptake by different phytoplankton size classes ($P_i$). The phytoplankton are subject to grazing by two zooplankton of different sizes ($Z_1$, $Z_2$). The phytoplankton growth is limited by light and nutrient, and is scaled by temperature dependence. The detritus pool, $D$, collects the dead and ungrazed matters, follows by recharging the nutrient pool with remineralization processes.
+The size-based model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) framework (_sensu_ Fasham et al., 1990 and Armstrong, 1994) and is a differential equation-based model. The model includes one nutrient source, phosphorus $PO_4^{3-}$, available for uptake by different phytoplankton size classes ($P_i$). The phytoplankton are subject to grazing by two zooplankton of different sizes ($Z_1$, $Z_2$). The phytoplankton growth is limited by light and nutrient, and is scaled by temperature dependence. The detritus pool, $D$, collects the dead and ungrazed matters, follows by recharging the nutrient pool through remineralization processes.
 
 <img width="1009" alt="Figure1_v2" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/ddae39b7-f956-460d-8738-2a3c6e6a5b39">
 
