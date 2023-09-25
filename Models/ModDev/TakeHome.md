@@ -48,7 +48,7 @@ Take home from v3.0
 ```
 Take home from v3.1
 - We reduce the Q10 value for zooplankton max. ingestion rate (grazing)
-- More persistence of zooplankton
-- Higher nutrient peaks
+- Phytoplankton get more persistence
+- But there are higher nutrient peaks -> uptake is not efficient
 ```
 <img width="575" alt="image" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/c1d480e1-6e9b-40ec-9c4e-c10a4673ec87">
