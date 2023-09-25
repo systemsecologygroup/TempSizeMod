@@ -27,13 +27,17 @@ v2.0
 The modifications are:
   - adding allometric scaling for thermal optima
 
-v2.1
+v3.0
 The modifications are:
   - adding Q10 for zooplankton grazing
 
-v3.0
+v3.1
 The modifications are:
-  - different combinations of size and grazing strategies of zooplankton
+  - different combinations of zooplankton size
+
+v3.1
+The modifications are:
+  - different combinations of zooplankton grazing strategies
 
 v4.0 (Pending)
 The modifications are:
