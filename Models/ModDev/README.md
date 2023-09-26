@@ -31,18 +31,22 @@ v3.0
 The modifications are:
   - adding Q10 for zooplankton grazing
 
-v3.1
+v3.0.1
 The modifications are:
-  - different combinations of zooplankton size
+  - reducing Q10 values for zooplankton grazing
 
 v3.1
-The modifications are:
-  - different combinations of zooplankton grazing strategies
-    
-v3.2
 The modifications are:
   - applying realistic mixed layer depth (MLD) profile
 
+v3.2.0
+The modifications are:
+  - different combinations of zooplankton size
+
+v3.2.1
+The modifications are:
+  - different combinations of zooplankton grazing strategies
+    
 v4.0 (Pending)
 The modifications are:
   - An advanced assumption associating nutrient levels with thermal optima of the phytoplankton
