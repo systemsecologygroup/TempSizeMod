@@ -37,7 +37,7 @@ The modifications are:
 
 v3.1
 The modifications are:
-  - applying realistic mixed layer depth (MLD) profile
+  - applying realistic lake forcing (Greifensee) to the model - standard run
 
 v3.2.0
 The modifications are:
