@@ -37,7 +37,8 @@ The modifications are:
 
 v3.1
 The modifications are:
-  - applying realistic lake forcing (Greifensee) to the model - standard run
+  - applying realistic lake forcing (Greifensee) to the model: Temperature, PAR, MLD, PO4
+  - standard run
 
 v3.2.0
 The modifications are:
