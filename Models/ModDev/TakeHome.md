@@ -1,5 +1,5 @@
 ```
-Take home from v1.0
+Take home from v1.0.0
 - almost same biomass level when changing the number of phytoplankton size classes from 3 to 15.
 - Zooplankton couple well with phytoplankton
 - Regular cycles
@@ -7,26 +7,26 @@ Take home from v1.0
 <img width="320" alt="image" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/37fcb989-6a5e-4d4d-92dc-ca65864a964d">
 
 ```
-Take home from v1.1
+Take home from v1.0.1
 - we updated the temperature forcing 
 - the dynamics of the state variables are almost the same as v1.0
 ```
 
 ```
-Take home from v1.2
+Take home from v1.0.2
 - we additionally updated the PAR conversion
 - the dynamics of the state variables are almost the same as v1.0 and v1.1
 ```
 
 ```
-## Key take home from v1
+## Key take home from v1.0
 - This base model is not highly sensitive to temperature and PAR forcing
 - Zooplankton couple well with phytoplankton -> grazing is active
 ```
 
 
 ```
-Take home from v2.0
+Take home from v2.0.0
 - We added temperature performance curve to replace the Eppley function from v1
 - There are more fluctuations in the dynamics of the state variables
 - Occasional peaks are observed for nutrient
@@ -37,7 +37,7 @@ Take home from v2.0
 
 
 ```
-Take home from v3.0
+Take home from v3.0.0
 - We added Q10 to zooplankton max. ingestion rate (grazing)
 - The Q10 grazing has removed some fluctuations from phytoplankton biomass
 - Zooplankton almost always catch up instantaneously with phytoplankton and control their development -> Those are highly edible cells
@@ -54,7 +54,7 @@ Take home from v3.0.1
 <img width="320" alt="image" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/c1d480e1-6e9b-40ec-9c4e-c10a4673ec87">
 
 ```
-Take home from v3.1
+Take home from v3.0.2
 - We introduce realistic MLD forcing (from Greifensee)
 - Phytoplankton persist for a prolonged period in the year cycle
 - Zooplankton decouple with phytoplankton as MLD gets shallow (stratification) -> grazing is not efficient during a certain period
@@ -63,19 +63,14 @@ Take home from v3.1
 <img width="320" alt="image" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/dcaf2373-80e2-46d1-8759-cdf46392eb67">
 
 ```
-Take home from v3.2
+Take home from v3.0.3
 - We change the combination of zooplankton size to 150 and 400 (previously 5 and 400)
 - We find that grazing parameters are rather sensitive e.g. when changing the size combination of the zooplankton, model often collapse due to different other grazing parameters such as Q10, grazing strategies etc.
 - We parametrize the Q10 values that are robust to all selected zooplankton size
 ```
 
 ```
-## Key take home from v3
+## Key take home from v3.0
 - When added parametrization to grazing, the system begins to produce extreme values and become unstable e.g. phytoplankton can go extinct in some cases
 - Immigration might be needed to compensate the extinction, before we can further experiment on the grazing configurations
-```
-
-```
-Take home from v4.0
-- We add immigration for the phytoplankton community
 ```
