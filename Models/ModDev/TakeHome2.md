@@ -21,3 +21,14 @@ $f(T, S_i^P)$ - community size-specific response to temperature
 ### Exploration --
 #### How community mean response in temperature regulation differ to community size-specific response in temperature regulation
 
+We compare the different mechanism on temperature regulation using a lake model based on realistic environmental forcing, specifically,
+1. Lake water surface temperature,
+2. Photosynthetically-active radiation,
+3. Mixed layer depth, and 
+4. Phosphate concentration.
+
+We examine changes in the dynamics of the model variables with two indices, the total phytoplankton biomass and the phytoplankton mean size.
+
+
+
+
