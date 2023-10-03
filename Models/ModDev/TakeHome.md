@@ -63,13 +63,6 @@ Take home from v3.0.2
 <img width="320" alt="image" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/dcaf2373-80e2-46d1-8759-cdf46392eb67">
 
 ```
-Take home from v3.0.3
-- We change the combination of zooplankton size to 150 and 400 (previously 5 and 400)
-- We find that grazing parameters are rather sensitive e.g. when changing the size combination of the zooplankton, model often collapse due to different other grazing parameters such as Q10, grazing strategies etc.
-- We parametrize the Q10 values that are robust to all selected zooplankton size
-```
-
-```
 ## Key take home from v3.0
 - When added parametrization to grazing, the system begins to produce extreme values and become unstable e.g. phytoplankton can go extinct in some cases
 - Immigration might be needed to compensate the extinction, before we can further experiment on the grazing configurations
