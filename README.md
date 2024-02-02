@@ -45,27 +45,27 @@ representing, respectively, maximum growth rate, $\mu_{max}(S_i^P)$, for phytopl
 
 
 Reference:
-Acevedo-Trejos, E., E. Marañón, and A. Merico. 2018. Phytoplankton size diversity and ecosystem   function relationships across oceanic regions. Proc. R. Soc. B. 285: 20180621. doi:10.1098/rspb.2018.0621
-Armstrong, R. A. 1994. Grazing limitation and nutrient limitation in marine ecosystems: Steady state solutions of an ecosystem model with multiple food chains. Limnol. Oceanogr. 39: 597–608. doi:10.4319/lo.1994.39.3.0597
-Carpenter, S. R. 2005. Eutrophication of aquatic ecosystems: Bistability and soil phosphorus. Proc. Natl. Acad. Sci. U.S.A. 102: 10002–10005. doi:10.1073/pnas.0503959102
++ Acevedo-Trejos, E., E. Marañón, and A. Merico. 2018. Phytoplankton size diversity and ecosystem   function relationships across oceanic regions. Proc. R. Soc. B. 285: 20180621. doi:10.1098/rspb.2018.0621
++ Armstrong, R. A. 1994. Grazing limitation and nutrient limitation in marine ecosystems: Steady state solutions of an ecosystem model with multiple food chains. Limnol. Oceanogr. 39: 597–608. doi:10.4319/lo.1994.39.3.0597
++ Carpenter, S. R. 2005. Eutrophication of aquatic ecosystems: Bistability and soil phosphorus. Proc. Natl. Acad. Sci. U.S.A. 102: 10002–10005. doi:10.1073/pnas.0503959102
 Dudgeon, D. 2019. Multiple threats imperil freshwater biodiversity in the Anthropocene. Current Biology 29: R960–R967. doi:10.1016/j.cub.2019.08.002
-Edwards, K. F., M. K. Thomas, C. A. Klausmeier, and E. Litchman. 2012. Allometric scaling and taxonomic variation in nutrient utilization traits and maximum growth rate of phytoplankton. Limnol. Oceanogr. 57: 554–566. doi:10.4319/lo.2012.57.2.0554
-Fasham, M. J. R., H. W. Ducklow, and S. M. McKelvie. 1990. A nitrogen-based model of plankton dynamics in the oceanic mixed layer. j mar res 48: 591–639. doi:10.1357/002224090784984678
-Hansen, B., P. K. Bjørnsen, and P. J. Hansen. 1994. The size ratio between planktonic predators and their prey. Limnology and Oceanography 39: 395–403. doi:10.4319/lo.1994.39.2.0395
-Hansen, P. J., P. K. Bjørnsen, and B. Hansen. 1997. Zooplankton grazing and growth: Scaling within the 2-2,000um body size range. Limnology and Oceanography 42: 687–704.
-Ho, J. C., A. M. Michalak, and N. Pahlevan. 2019. Widespread global increase in intense lake phytoplankton blooms since the 1980s. Nature 574: 667–670. doi:10.1038/s41586-019-1648-7
-Huisman, J., G. A. Codd, H. W. Paerl, B. W. Ibelings, J. M. H. Verspagen, and P. M. Visser. 2018. Cyanobacterial blooms. Nature Reviews Microbiology 16: 471–483. doi:10.1038/s41579-018-0040-1
-Litchman, E. 2023. Understanding and predicting harmful algal blooms in a changing climate: A trait‐based framework. Limnol Oceanogr Letters 8: 229–246. doi:10.1002/lol2.10294
-Litchman, E., and C. A. Klausmeier. 2008. Trait-Based Community Ecology of Phytoplankton. Annu. Rev. Ecol. Evol. Syst. 39: 615–639. doi:10.1146/annurev.ecolsys.39.110707.173549
-Merico, A., J. Bruggeman, and K. Wirtz. 2009. A trait-based approach for downscaling complexity in plankton ecosystem models. Ecological Modelling 220: 3001–3010. doi:10.1016/j.ecolmodel.2009.05.005
-Moloney, C. L., and J. G. Field. 1991. The size-based dynamics of plankton food webs. I. A simulation model of carbon and nitrogen flows. J Plankton Res 13: 1003–1038. doi:10.1093/plankt/13.5.1003
-Paerl, H. W., W. S. Gardner, K. E. Havens, A. R. Joyner, M. J. McCarthy, S. E. Newell, B. Qin, and J. T. Scott. 2016. Mitigating cyanobacterial harmful algal blooms in aquatic ecosystems impacted by climate change and anthropogenic nutrients. Harmful Algae 54: 213–222. doi:10.1016/j.hal.2015.09.009
-Petchey, O. L., P. T. McPhearson, T. M. Casey, and P. J. Morin. 1999. Environmental warming alters food-web structure and ecosystem function. Nature 402: 69–72. doi:10.1038/47023
-Pomati, F., J. B. Shurin, K. H. Andersen, C. Tellenbach, and A. D. Barton. 2020. Interacting Temperature, Nutrients and Zooplankton Grazing Control Phytoplankton Size-Abundance Relationships in Eight Swiss Lakes. Front. Microbiol. 10: 3155. doi:10.3389/fmicb.2019.03155
-Reid, A. J., A. K. Carlson, I. F. Creed, and others. 2019. Emerging threats and persistent conservation challenges for freshwater biodiversity. Biological Reviews 94: 849–873. doi:10.1111/brv.12480
-Reinl, K. L., J. D. Brookes, C. C. Carey, and others. 2021. Cyanobacterial blooms in oligotrophic lakes: Shifting the high‐nutrient paradigm. Freshwater Biology 66: 1846–1859. doi:10.1111/fwb.13791
-Reinl, K. L., T. D. Harris, R. L. North, and others. 2023. Blooms also like it cold. Limnol Oceanogr Letters 8: 546–564. doi:10.1002/lol2.10316
-Stock, C. A., T. M. Powell, and S. A. Levin. 2008. Bottom–up and top–down forcing in a simple size-structured plankton dynamics model. Journal of Marine Systems 74: 134–152. doi:10.1016/j.jmarsys.2007.12.004
-Striebel, M., S. Schabhüttl, D. Hodapp, P. Hingsamer, and H. Hillebrand. 2016. Phytoplankton responses to temperature increases are constrained by abiotic conditions and community composition. Oecologia 182: 815–827. doi:10.1007/s00442-016-3693-3
-Ward, B. A., S. Dutkiewicz, O. Jahn, and M. J. Follows. 2012. A size-structured food-web model for the global ocean. Limnol. Oceanogr. 57: 1877–1891. doi:10.4319/lo.2012.57.6.1877
-Yvon-Durocher, G., J. M. Montoya, M. Trimmer, and G. Woodward. 2011. Warming alters the size spectrum and shifts the distribution of biomass in freshwater ecosystems: WARMING ALTERS COMMUNITY SIZE STRUCTURE. Global Change Biology 17: 1681–1694. doi:10.1111/j.1365-2486.2010.02321.x
++ Edwards, K. F., M. K. Thomas, C. A. Klausmeier, and E. Litchman. 2012. Allometric scaling and taxonomic variation in nutrient utilization traits and maximum growth rate of phytoplankton. Limnol. Oceanogr. 57: 554–566. doi:10.4319/lo.2012.57.2.0554
++ Fasham, M. J. R., H. W. Ducklow, and S. M. McKelvie. 1990. A nitrogen-based model of plankton dynamics in the oceanic mixed layer. j mar res 48: 591–639. doi:10.1357/002224090784984678
++ Hansen, B., P. K. Bjørnsen, and P. J. Hansen. 1994. The size ratio between planktonic predators and their prey. Limnology and Oceanography 39: 395–403. doi:10.4319/lo.1994.39.2.0395
++ Hansen, P. J., P. K. Bjørnsen, and B. Hansen. 1997. Zooplankton grazing and growth: Scaling within the 2-2,000um body size range. Limnology and Oceanography 42: 687–704.
++ Ho, J. C., A. M. Michalak, and N. Pahlevan. 2019. Widespread global increase in intense lake phytoplankton blooms since the 1980s. Nature 574: 667–670. doi:10.1038/s41586-019-1648-7
++ Huisman, J., G. A. Codd, H. W. Paerl, B. W. Ibelings, J. M. H. Verspagen, and P. M. Visser. 2018. Cyanobacterial blooms. Nature Reviews Microbiology 16: 471–483. doi:10.1038/s41579-018-0040-1
++ Litchman, E. 2023. Understanding and predicting harmful algal blooms in a changing climate: A trait‐based framework. Limnol Oceanogr Letters 8: 229–246. doi:10.1002/lol2.10294
++ Litchman, E., and C. A. Klausmeier. 2008. Trait-Based Community Ecology of Phytoplankton. Annu. Rev. Ecol. Evol. Syst. 39: 615–639. doi:10.1146/annurev.ecolsys.39.110707.173549
++ Merico, A., J. Bruggeman, and K. Wirtz. 2009. A trait-based approach for downscaling complexity in plankton ecosystem models. Ecological Modelling 220: 3001–3010. doi:10.1016/j.ecolmodel.2009.05.005
++ Moloney, C. L., and J. G. Field. 1991. The size-based dynamics of plankton food webs. I. A simulation model of carbon and nitrogen flows. J Plankton Res 13: 1003–1038. doi:10.1093/plankt/13.5.1003
++ Paerl, H. W., W. S. Gardner, K. E. Havens, A. R. Joyner, M. J. McCarthy, S. E. Newell, B. Qin, and J. T. Scott. 2016. Mitigating cyanobacterial harmful algal blooms in aquatic ecosystems impacted by climate change and anthropogenic nutrients. Harmful Algae 54: 213–222. doi:10.1016/j.hal.2015.09.009
++ Petchey, O. L., P. T. McPhearson, T. M. Casey, and P. J. Morin. 1999. Environmental warming alters food-web structure and ecosystem function. Nature 402: 69–72. doi:10.1038/47023
++ Pomati, F., J. B. Shurin, K. H. Andersen, C. Tellenbach, and A. D. Barton. 2020. Interacting Temperature, Nutrients and Zooplankton Grazing Control Phytoplankton Size-Abundance Relationships in Eight Swiss Lakes. Front. Microbiol. 10: 3155. doi:10.3389/fmicb.2019.03155
++ Reid, A. J., A. K. Carlson, I. F. Creed, and others. 2019. Emerging threats and persistent conservation challenges for freshwater biodiversity. Biological Reviews 94: 849–873. doi:10.1111/brv.12480
++ Reinl, K. L., J. D. Brookes, C. C. Carey, and others. 2021. Cyanobacterial blooms in oligotrophic lakes: Shifting the high‐nutrient paradigm. Freshwater Biology 66: 1846–1859. doi:10.1111/fwb.13791
++ Reinl, K. L., T. D. Harris, R. L. North, and others. 2023. Blooms also like it cold. Limnol Oceanogr Letters 8: 546–564. doi:10.1002/lol2.10316
++ Stock, C. A., T. M. Powell, and S. A. Levin. 2008. Bottom–up and top–down forcing in a simple size-structured plankton dynamics model. Journal of Marine Systems 74: 134–152. doi:10.1016/j.jmarsys.2007.12.004
++ Striebel, M., S. Schabhüttl, D. Hodapp, P. Hingsamer, and H. Hillebrand. 2016. Phytoplankton responses to temperature increases are constrained by abiotic conditions and community composition. Oecologia 182: 815–827. doi:10.1007/s00442-016-3693-3
++ Ward, B. A., S. Dutkiewicz, O. Jahn, and M. J. Follows. 2012. A size-structured food-web model for the global ocean. Limnol. Oceanogr. 57: 1877–1891. doi:10.4319/lo.2012.57.6.1877
++ Yvon-Durocher, G., J. M. Montoya, M. Trimmer, and G. Woodward. 2011. Warming alters the size spectrum and shifts the distribution of biomass in freshwater ecosystems: WARMING ALTERS COMMUNITY SIZE STRUCTURE. Global Change Biology 17: 1681–1694. doi:10.1111/j.1365-2486.2010.02321.x
