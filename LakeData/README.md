@@ -6,10 +6,13 @@ The original dataset contains an approximately three-year time-series from 13/3/
 
 The steps deriving these forcing profile is shown in the python script 'TSM_TempForcing.py', 'TSM_PARForcing.py', and 'TSM_MLDForcing.py' respectively.
 
+![Temp_final](https://github.com/Debbcwing/TempSizeMod/assets/51200142/143b28e3-91aa-4873-8128-206084cb0d92)
 
+![PAR_final](https://github.com/Debbcwing/TempSizeMod/assets/51200142/c73307e7-6112-4a46-98ff-70498ce8ea82)
 
+![MLD_final](https://github.com/Debbcwing/TempSizeMod/assets/51200142/320f93d5-26a6-42d7-a63a-247817c84df5)
 
                                      
 Reference
-Pomati, F., J. Jokela, M. Simona, M. Veronesi, and B. W. Ibelings. 2011. An Automated Platform for Phytoplankton Ecology and Aquatic Ecosystem Monitoring. Environ. Sci. Technol. 45: 9658–9665. doi:10.1021/es201934n
-Pomati, F., J. B. Shurin, K. H. Andersen, C. Tellenbach, and A. D. Barton. 2020. Interacting Temperature, Nutrients and Zooplankton Grazing Control Phytoplankton Size-Abundance Relationships in Eight Swiss Lakes. Front. Microbiol. 10: 3155. doi:10.3389/fmicb.2019.03155
++ Pomati, F., J. Jokela, M. Simona, M. Veronesi, and B. W. Ibelings. 2011. An Automated Platform for Phytoplankton Ecology and Aquatic Ecosystem Monitoring. Environ. Sci. Technol. 45: 9658–9665. doi:10.1021/es201934n
++ Pomati, F., J. B. Shurin, K. H. Andersen, C. Tellenbach, and A. D. Barton. 2020. Interacting Temperature, Nutrients and Zooplankton Grazing Control Phytoplankton Size-Abundance Relationships in Eight Swiss Lakes. Front. Microbiol. 10: 3155. doi:10.3389/fmicb.2019.03155
