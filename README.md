@@ -30,7 +30,7 @@ The maximum ingestion rates of zooplankton follows a Q10 model such that, the ma
 
 $$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}} $$
 
-The Q10 temperature coefficient here specifies the amount of maximum ingestion rate increases with a 10$^{\circ}$C temperature increase. It describes the sensitivity of zooplankton response to a higher temperature. $T$ refers to the lake temperature, while $T_{ref}$ refers to the reference temperature when the rate is equal to the baseline rate (i.e. no effects from temperature).
+The Q10 temperature coefficient here specifies the amount of maximum ingestion rate increases with a 10 $^{\circ}$ C temperature increase. It describes the sensitivity of zooplankton response to a higher temperature. $T$ refers to the lake temperature, while $T_{ref}$ refers to the reference temperature when the rate is equal to the baseline rate (i.e. no effects from temperature).
 
 ## Allometric relationships in the model
 The model comprises of three allometric equations. These allometries allow an ecological trade-off to arise in the model based on water temperature throughout the year. The small phytoplantkon can grow faster than the large phytoplankton, but are subject to stronger grazing from the smaller zooplankton, who will selectively graze on the small cells. 
