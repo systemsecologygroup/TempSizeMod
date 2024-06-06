@@ -5,32 +5,31 @@ Over half of the global lakes are recording increases in lake temperature and re
 In the current realm of global environmental change, understanding the effects of temperature on phytoplankton community is highly important for ecosystem management (Paerl et al. 2016). Nevertheless, in a multi-stressor system, disentangling the effects of temperature on phytoplankotn is not easy (Dudgeon 2019). Temperature often interacts with other environmental factors like lake mixing and stratifications, lights, and zooplankton grazer (Pomati et al. 2020), thus it affects phytoplankton communities both directly and indirectly (Zohary et al. 2021). This makes predictions on community dynamics difficult. For instance, the occurrence of phytoplankton blooms is becoming more unpredictable (e.g. Sterner et al. 2020; Reinl et al. 2021, 2023).
 
 Trait-based models are valueable tools to disentangle possible effects and test possible mechanisms temperature has on phytoplankton (Litchman 2023). Phytoplantkon cell size is a master trait and has been used widely in modelling works (Litchman and Klausmeier 2008). Size-based models allow explorations on aggregated community properties such as total biomass and community mean cell size of phytoplankton (e.g. Ward et al. 2012; Acevedo-Trejos et al. 2018; To et al. 2024). They are useful for understanding changes in the macroecological patterns of the phytoplankton community size compositions in response to changes in environmental conditions.
-
+<br/><br/>
 ## Model description
 The model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) model (_sensu_ Fasham et al., 1990; Post et al. 2024) incorporated to a size-based framework (e.g. Armstrong 1994; To et al. 2024). The model is differential equation-based and includes one nutrient source, phosphorus $PO_4^{3-}$, available for uptake by different phytoplankton size classes ($P_i$). The phytoplankton are subject to grazing by two zooplankton of different size groups ($Z_1$, $Z_2$). The phytoplankton growth is limited by light and nutrient, and is scaled by a temperature dependence. The detritus pool, $D$, collects the dead and ungrazed matters, follows by recharging the nutrient pool through remineralization processes.
 
 <p align="center">
-  <img width="903" alt="Figure1_v2 1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/635bf554-5d55-43fd-b2a7-1a6c73704d0f">
+  <img width="603" alt="Figure1_v2 1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/635bf554-5d55-43fd-b2a7-1a6c73704d0f">
 
 
 The model focuses on capturing size-dependent bottom-up and top-down interactions through data-driven allometric relationships of phytoplankton growth and zooaplankton grazing (Hansen et al. 1994, 1997; Edwards et al. 2012). The model aims at studying changes in the size compositions of lake phytoplankton communities. 
 
-
-
+<br/>
 ## Temperature dependence in the model
 The temperature dependence for phytoplankton growth follows a bell-shaped thermal tolerance curve, given by,
 
 $$E(T) = e^{0.063T}  \left[1- \left(\frac{T-T_{opt}}{\sigma_T}\right)^2 \right] $$
-
+<br/>
 , where $T$ is the ambient lake water surface temperature (LWST), $T_{opt}$ is the thermal optima that determines the median of the curve, and $\sigma_T$ is the thermal tolerance that determines the width of the curve. In this study, we assume a community mean thermal tolerance curve to all phytoplankton size classes.
 
 The maximum ingestion rates of zooplankton follows a Q10 model such that, the maximum grazing increases with temperature. The equation for the dependence is,
 
 $$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}} $$
-
+<br/>
 The Q10 temperature coefficient here specifies the amount of maximum ingestion rate increases with a 10 $^{\circ}$ C temperature increase. It describes the sensitivity of zooplankton response to a higher temperature. $T$ refers to the lake temperature, while $T_{ref}$ refers to the reference temperature when the rate is equal to the baseline rate (i.e. no effects from temperature).
 
-
+<br/><br/>
 ## Allometric relationships in the model
 The model comprises of three allometric equations. These allometries allow an ecological trade-off to arise in the model based on water temperature throughout the year. The small phytoplantkon can grow faster than the large phytoplankton, but are subject to stronger grazing from the smaller zooplankton, who will selectively graze on the small cells. 
 
@@ -41,15 +40,34 @@ $$\mu_{max}(S_i^P) = \beta_{\mu_{max}}\cdot (S_i^P)^{\alpha_{\mu_{max}}}$$
 $$I_{max}(S_j^Z) = \beta_{I_{max}}\cdot (S_j^Z)^{\alpha_{I_{max}}}$$
 
 $$P_{opt}(S_i^P, S_j^Z) = \beta_{P_{opt}}\cdot (S_j^Z)^{\alpha_{P_{opt}}}$$
-
+<br/>
 representing, respectively, maximum growth rate, $\mu_{max}(S_i^P)$, for phytoplankton size class $i$, and maximum ingestion rate, $I_{max}(S_j^Z)$, and optimal prey size, $P_{opt}(S_i^P, S_j^Z)$, for zooplankton size class $j$.
 
+<br/><br/>
+## Experiments
+Using the standard model, we conduct two numerical experiments:<br/>
+1. a projection based on Representative Climate Pathways (RCPs) issued by IPCC
+2. a sensitivity test for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different RCP scenarios
 
+For details, please refer to related publication of this model (under review).
 
+<br/><br/>
+## Suggestions for future works
+1. Numerical explorations, e.g. how different assumptions on the temperature dependence of phytoplankton growth would change the predictions on communities compositions of phytoplankton
+   - Community Eppley / Q10 model (Ho et al. 2013)
+   - Size-dependent Eppley (e.g. Taherzadeh et al. 2017; Anderson et al. 2023; To et al. 2024)
+   - Community unimodal curve (Cagle and Roelke 2021; This study)
+   - Size-dependent unimodal curve 
+<br/>
+2. Ecological explorations over altered stratification phenology in lakes (Woolway et al. 2021), for example,
+    <img width="400" alt="Figure1_v2 1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/dc436e0b-0768-444d-87ff-6aafd7fa78ae">
 
+<br/><br/><br/><br/><br/><br/>
 Reference:
 + Acevedo-Trejos, E., E. Marañón, and A. Merico. 2018. Phytoplankton size diversity and ecosystem   function relationships across oceanic regions. Proc. R. Soc. B. 285: 20180621. doi:10.1098/rspb.2018.0621
++ Anderson, S. I., Fronda, C., Barton, A. D., Clayton, S., Rynearson, T. A., & Dutkiewicz, S. (2024). Phytoplankton thermal trait parameterization alters community structure and biogeochemical processes in a modeled ocean. Global Change Biology, 30(1), e17093. https://doi.org/10.1111/gcb.17093
 + Armstrong, R. A. 1994. Grazing limitation and nutrient limitation in marine ecosystems: Steady state solutions of an ecosystem model with multiple food chains. Limnol. Oceanogr. 39: 597–608. doi:10.4319/lo.1994.39.3.0597
++ Cagle, S. E., & Roelke, D. L. (2021). Relative roles of fundamental processes underpinning PEG dynamics in dimictic lakes as revealed by a self-organizing, multi-population plankton model. Ecological Modelling, 462, 109793. https://doi.org/10.1016/j.ecolmodel.2021.109793
 + Carpenter, S. R. 2005. Eutrophication of aquatic ecosystems: Bistability and soil phosphorus. Proc. Natl. Acad. Sci. U.S.A. 102: 10002–10005. doi:10.1073/pnas.0503959102
 + Dokulil, M. T., De Eyto, E., Maberly, S. C., May, L., Weyhenmeyer, G. A., & Woolway, R. I. (2021). Increasing maximum lake surface temperature under climate change. Climatic Change, 165(3–4), 56. https://doi.org/10.1007/s10584-021-03085-1
 + Dudgeon, D. 2019. Multiple threats imperil freshwater biodiversity in the Anthropocene. Current Biology 29: R960–R967. doi:10.1016/j.cub.2019.08.002
@@ -57,6 +75,7 @@ Reference:
 + Fasham, M. J. R., H. W. Ducklow, and S. M. McKelvie. 1990. A nitrogen-based model of plankton dynamics in the oceanic mixed layer. j mar res 48: 591–639. doi:10.1357/002224090784984678
 + Hansen, B., P. K. Bjørnsen, and P. J. Hansen. 1994. The size ratio between planktonic predators and their prey. Limnology and Oceanography 39: 395–403. doi:10.4319/lo.1994.39.2.0395
 + Hansen, P. J., P. K. Bjørnsen, and B. Hansen. 1997. Zooplankton grazing and growth: Scaling within the 2-2,000um body size range. Limnology and Oceanography 42: 687–704.
+Ho, P.-C., Chang, C.-W., Hsieh, C. H., Shiah, F.-K., & Miki, T. (2013). Effects of increasing nutrient supply and omnivorous feeding on the size spectrum slope: A size-based nutrient-phytoplankton-zooplankton model. Population Ecology, 55(2), 247–259. https://doi.org/10.1007/s10144-013-0368-3
 + Ho, J. C., A. M. Michalak, and N. Pahlevan. 2019. Widespread global increase in intense lake phytoplankton blooms since the 1980s. Nature 574: 667–670. doi:10.1038/s41586-019-1648-7
 + Litchman, E. 2023. Understanding and predicting harmful algal blooms in a changing climate: A trait‐based framework. Limnol Oceanogr Letters 8: 229–246. doi:10.1002/lol2.10294
 + Litchman, E., and C. A. Klausmeier. 2008. Trait-Based Community Ecology of Phytoplankton. Annu. Rev. Ecol. Evol. Syst. 39: 615–639. doi:10.1146/annurev.ecolsys.39.110707.173549
@@ -68,8 +87,10 @@ Reference:
 + Reinl, K. L., J. D. Brookes, C. C. Carey, and others. 2021. Cyanobacterial blooms in oligotrophic lakes: Shifting the high‐nutrient paradigm. Freshwater Biology 66: 1846–1859. doi:10.1111/fwb.13791
 + Reinl, K. L., T. D. Harris, R. L. North, and others. 2023. Blooms also like it cold. Limnol Oceanogr Letters 8: 546–564. doi:10.1002/lol2.10316
 + Striebel, M., S. Schabhüttl, D. Hodapp, P. Hingsamer, and H. Hillebrand. 2016. Phytoplankton responses to temperature increases are constrained by abiotic conditions and community composition. Oecologia 182: 815–827. doi:10.1007/s00442-016-3693-3
++ Taherzadeh, N., Kerimoglu, O., & Wirtz, K. W. (2017). Can we predict phytoplankton community size structure using size scalings of eco-physiological traits? Ecological Modelling, 360, 279–289. https://doi.org/10.1016/j.ecolmodel.2017.07.008
 + To, S., Acevedo‐Trejos, E., Chakraborty, S., Pomati, F., & Merico, A. (2024). Grazing strategies determine the size composition of phytoplankton in eutrophic lakes. Limnology and Oceanography, lno.12538. https://doi.org/10.1002/lno.12538
 + Ward, B. A., S. Dutkiewicz, O. Jahn, and M. J. Follows. 2012. A size-structured food-web model for the global ocean. Limnol. Oceanogr. 57: 1877–1891. doi:10.4319/lo.2012.57.6.1877
 + Winder, M., & Sommer, U. (2012). Phytoplankton response to a changing climate. Hydrobiologia, 698(1), 5–16. https://doi.org/10.1007/s10750-012-1149-2
++ Woolway, R. I., Sharma, S., Weyhenmeyer, G. A., Debolskiy, A., Golub, M., Mercado-Bettín, D., Perroud, M., Stepanenko, V., Tan, Z., Grant, L., Ladwig, R., Mesman, J., Moore, T. N., Shatwell, T., Vanderkelen, I., Austin, J. A., DeGasperi, C. L., Dokulil, M., La Fuente, S., … Jennings, E. (2021). Phenological shifts in lake stratification under climate change. Nature Communications, 12(1), 2318. https://doi.org/10.1038/s41467-021-22657-4
 + Yvon-Durocher, G., J. M. Montoya, M. Trimmer, and G. Woodward. 2011. Warming alters the size spectrum and shifts the distribution of biomass in freshwater ecosystems. Global Change Biology 17: 1681–1694. doi:10.1111/j.1365-2486.2010.02321.x
 + Zohary, T., Flaim, G., & Sommer, U. (2021). Temperature and the size of freshwater phytoplankton. Hydrobiologia, 848(1), 143–155. https://doi.org/10.1007/s10750-020-04246-6
