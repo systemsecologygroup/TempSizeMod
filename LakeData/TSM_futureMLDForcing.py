@@ -7,7 +7,7 @@ import pandas as pd
 
 wd = 'your wd'
 
-data_mld = pd.read_csv(wd + '/RawData_MLD.csv', index_col=0)
+data_mld = pd.read_csv(wd+'/RawData_MLD.csv')
 
 #---------------------------------------------------------------------
 # convert real data to julian day (0-365)
