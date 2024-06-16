@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-wd = '/Users/szewing/Desktop/PhD_work/3. ThermalTrait/'
+wd = 'your wd'
 
-data_mld = pd.read_csv(wd + '/TempSizeMod_TSM/Forcing/Final/Original_MLD.csv', index_col=0)
+data_mld = pd.read_csv(wd + '/RawData_MLD.csv', index_col=0)
 
 #---------------------------------------------------------------------
 # convert real data to julian day (0-365)
