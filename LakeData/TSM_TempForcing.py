@@ -7,7 +7,7 @@ import pandas as pd
 
 wd = 'your wd'
 
-data = pd.read_csv(wd+'/Original_forc_data.csv')
+data = pd.read_csv(wd+'/RawData_Temp+PAR.csv')
 data_temp = data[['date', 'water_temp']]
 
 
