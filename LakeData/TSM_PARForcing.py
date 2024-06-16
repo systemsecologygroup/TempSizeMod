@@ -9,7 +9,7 @@ import pandas as pd
 
 wd = 'your wd'
 
-data = pd.read_csv(wd+'/Original_Temp+PAR.csv')
+data = pd.read_csv(wd+'/RawData_Temp+PAR.csv')
 data_nSSI = data[['date', 'global_radiation']]
 
 
