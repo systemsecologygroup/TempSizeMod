@@ -288,5 +288,5 @@ plankdata = pd.DataFrame(plankdata)
 plankdata.columns = ['Julian day', 'PhyBiom', 'Sw', 'ZooBiom']
 
 
-plankdata.to_csv(wd + "/PlankData_comp.csv")
+plankdata.to_csv(wd + "/PlankData4Calibr.csv")
 
