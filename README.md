@@ -54,7 +54,7 @@ Using the standard model, we conduct two numerical experiments:<br/>
 1. a projection based on Representative Climate Pathways (RCPs) issued by IPCC
 2. a sensitivity test for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different RCP scenarios
 
-For details, please refer to related publication of this model (under review).
+For details, please refer to the related publication of this model (under review).
 
 <br/><br/>
 ## Suggestions for future works
