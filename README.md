@@ -19,13 +19,16 @@ The model focuses on capturing size-dependent bottom-up and top-down interaction
 ## Temperature dependence in the model
 The temperature dependence for phytoplankton growth follows a bell-shaped thermal tolerance curve, given by,
 
-$$E(T) = e^{0.063T}  \left[1- \left(\frac{T-T_{opt}}{\sigma_T}\right)^2 \right] $$
+
+$$E(T) = e^{0.063T}  \left[1- \left(\frac{T-T_{opt}}{\sigma_T}\right)^2 \right] $$,
+
 <br/>
-, where $T$ is the ambient lake water surface temperature (LWST), $T_{opt}$ is the thermal optima that determines the median of the curve, and $\sigma_T$ is the thermal tolerance that determines the width of the curve. In this study, we assume a community mean thermal tolerance curve to all phytoplankton size classes.
+where $T$ is the ambient lake water surface temperature (LWST), $T_{opt}$ is the thermal optima that determines the median of the curve, and $\sigma_T$ is the thermal tolerance that determines the width of the curve. In this study, we assume a community mean thermal tolerance curve to all phytoplankton size classes.
 
 The maximum ingestion rates of zooplankton follows a Q10 model such that, the maximum grazing increases with temperature. The equation for the dependence is,
 
-$$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}} $$
+$$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}} $$.
+
 <br/>
 The Q10 temperature coefficient here specifies the amount of maximum ingestion rate increases with a 10 $^{\circ}$ C temperature increase. It describes the sensitivity of zooplankton response to a higher temperature. $T$ refers to the lake temperature, while $T_{ref}$ refers to the reference temperature when the rate is equal to the baseline rate (i.e. no effects from temperature).
 
