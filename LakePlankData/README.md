@@ -13,7 +13,7 @@ A graphical illustration of the transformation of time-averaged phytoplankton da
 <br/><br/>
 ### A brief description:
 This model outputs phytoplankton and zooplankton biomasses for different size classes. This information allow us to produce 1.) total phytoplankton biomass(µM P); 2.) total zooplankton biomass(µM P) ; and 3.) community mean phytoplankton size(µm ESD).
-After the transformations, the common unit considered for comparing model outputs and data are: biomass(µM P); and biovolume(µm$^3$)
+After the transformations, the common unit considered for comparing model outputs and data are: biomass(µM P); and biovolume(µm3)
 
 
 <br/><br/><br/>
