@@ -17,54 +17,18 @@ wd = 'your wd'
 # 2. non-predatory species
 # p.s. The model does not consider intra-guild predation; there are certain trophic links unable to capture.
 
-phydata = pd.read_csv(wd + '/GRE_raw_plankton_ab_size.csv', sep=',',
+phydata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
                       usecols=['date',
-                               'dinobryon_ROIs_0p5x', 'dinobryon_area_log10_mm2_5p0x',
-                               'uroglena_ROIs_0p5x', 'uroglena_area_log10_mm2_0p5x',
-                               'centric_diatom_ROIs_5p0x', 'centric_diatom_area_log10_mm2_5p0x',
-                               'cryptophyceae_ROIs_5p0x',
-                               'cryptophyceae_area_log10_mm2_5p0x_weightedmean', 'cryptophyceae_area_log10_mm2_5p0x_mean',
-                               'rhodomonas_ROIs_5p0x', 'rhodomonas_area_log10_mm2_5p0x',
-                               'chlorophytes_ROIs_5p0x', 'chlorophytes_area_log10_mm2_5p0x'])
-# Wherever weighted mean bio-area and major axis length is available for the phytoplankton, we used the weighted mean.
-# The mean would underestaimte the size in most days, except in time with high abundance
-phydata = phydata.drop(columns=['cryptophyceae_area_log10_mm2_5p0x_mean', 'cryptophyceae_maj_axis_len_mm_5p0x_mean',
-                                'cryptophyceae_min_axis_len_mm_5p0x_mean'])
-
-# rename
-phydata.columns = ['date',
                    'dinobryon_ROIs', 'dinobryon_area_log10_mm2',
                    'uroglena_ROIs', 'uroglena_area_log10_mm2',
                    'centric_diatom_ROIs', 'centric_diatom_area_log10_mm2',
                    'cryptophyceae_ROIs', 'cryptophyceae_area_log10_mm2',
                    'rhodomonas_ROIs', 'rhodomonas_area_log10_mm2',
-                   'chlorophytes_ROIs', 'chlorophytes_area_log10_mm2']
+                   'chlorophytes_ROIs', 'chlorophytes_area_log10_mm2'])
 
-
-zoodata = pd.read_csv(r'/Users/szewing/Desktop/PhD_work/Data/Steffi_eawag/GRE_plankton_ab_size_20240416.csv', sep=',',
-                      usecols=['date',
-                               'daphnia_ROIs_0p5x', 'daphnia_area_log10_mm2_0p5x',
-                               'eudiaptomus_ROIs_0p5x', 'eudiaptomus_area_log10_mm2_0p5x',
-                               'cyclops_ROIs_0p5x', 'cyclops_area_log10_mm2_0p5x',
-                               'nauplius_ROIs_0p5x', 'nauplius_area_log10_mm2_0p5x',
-                               'ciliates_ROIs_5p0x',
-                               'ciliates_area_log10_mm2_5p0x_weightedmean', 'ciliates_area_log10_mm2_5p0x_mean',
-                               'rotifers_ROIs_0p5x',
-                               'rotifers_area_log10_mm2_0p5x_weightedmean', 'rotifers_area_log10_mm2_0p5x_mean'])
-# Wherever weighted mean bio-area and major axis length is available for the phytoplankton, we used the weighted mean.
-# The mean would underestaimte the size in most days, except in time with high abundance
-zoodata = zoodata.drop(columns=['ciliates_area_log10_mm2_5p0x_mean', 'ciliates_maj_axis_len_mm_5p0x_mean', 'ciliates_min_axis_len_mm_5p0x_mean',
-                                'rotifers_area_log10_mm2_0p5x_mean', 'rotifers_maj_axis_len_mm_0p5x_mean', 'rotifers_min_axis_len_mm_0p5x_mean'])
-
-zoodata.columns = ['date',
-                   'daphnia_ROIs', 'daphnia_area_log10_mm2',
-                   'eudiaptomus_ROIs', 'eudiaptomus_area_log10_mm2',
-                   'cyclops_ROIs', 'cyclops_area_log10_mm2',
-                   'nauplius_ROIs', 'nauplius_area_log10_mm2',
-                   'ciliates_ROIs', 'ciliates_area_log10_mm2',
-                   'rotifers_ROIs', 'rotifers_area_log10_mm2']
-
-zoodata_used = zoodata[['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 'ciliates_ROIs', 'ciliates_area_log10_mm2']]
+zoodata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
+                      usecols=['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 
+                               'ciliates_ROIs', 'ciliates_area_log10_mm2'])
 
 ## set name
 physpecies = ['dinobryon', 'uroglena', 'centric_diatom', 'cryptophyceae', 'rhodomonas', 'chlorophytes']
