@@ -17,6 +17,7 @@ wd = 'your wd'
 # 2. non-predatory species
 # p.s. The model does not consider intra-guild predation; there are certain trophic links unable to capture.
 
+## For phytoplankton, we use only the ROIs and the bio-area data (see flow chart)
 phydata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
                       usecols=['date',
                    'dinobryon_ROIs', 'dinobryon_area_log10_mm2',
@@ -26,9 +27,10 @@ phydata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
                    'rhodomonas_ROIs', 'rhodomonas_area_log10_mm2',
                    'chlorophytes_ROIs', 'chlorophytes_area_log10_mm2'])
 
+## For zooplankton, we use major axis length and minor axis length for ciliates and major axis length for daphnia
 zoodata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
-                      usecols=['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 
-                               'ciliates_ROIs', 'ciliates_area_log10_mm2'])
+                      usecols=['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 'daphnia_MaL_mm', 'daphnia_MiL_mm',
+                               'ciliates_ROIs', 'ciliates_area_log10_mm2', 'ciliates_MaL_mm', 'ciliates_MiL_mm'])
 
 ## set name
 physpecies = ['dinobryon', 'uroglena', 'centric_diatom', 'cryptophyceae', 'rhodomonas', 'chlorophytes']
@@ -46,17 +48,23 @@ def logArea2μmArea(LnArea):
     return (10 ** LnArea) * mm_sq2μm_sq
 
 
+# adjusting the data units
 for i in range(len(physpecies)):
     phydata.insert(1 + i, physpecies[i] + '_area_μm2', logArea2μmArea(phydata[physpecies[i] + '_area_log10_mm2']))
 
 for i in range(len(zoospecies_used)):
     zoodata_used.insert(1 + i, zoospecies_used[i] + '_area_μm2', logArea2μmArea(zoodata_used[zoospecies_used[i] + '_area_log10_mm2']))
 
+for i in range(len(zoospecies_used)):
+    zoodata_used.insert(1+len(zoospecies_used) + i, zoospecies_used[i] + '_MaL_μm', zoodata_used[zoospecies_used[i] + '_MaL_mm'] * 1e3)
+
+for i in range(len(zoospecies_used)):
+    zoodata_used.insert(1+len(zoospecies_used)*2 + i, zoospecies_used[i] + '_MiL_μm', zoodata_used[zoospecies_used[i] + '_MiL_mm'] * 1e3)
+
 
 
 # The ROIs data refers to region of interest (ROI), it is taken by the underwater imaging camera, and the unit is objects capture or
-# detected per second [Detailed refers to Merz et al. (2020)]
-
+# detected per second [For details please refer to Merz et al. (2021)]
 def ROI_0p5x(roi):
     """
     0p5x is for cells or individuals that are in large size (100μm-7mm).
@@ -80,7 +88,7 @@ def ROI_5p0x(roi):
     return x
 
 
-### to phydata
+### converting to phyto abundance
 phydata.insert(2, 'dinobryon_count/mL', ROI_0p5x(phydata['dinobryon_ROIs']))  # large phyto
 phydata.insert(3, 'uroglena_count/mL', ROI_0p5x(phydata['uroglena_ROIs']))  # large phyto
 phydata.insert(4, 'centric_diatom_count/mL', ROI_5p0x(phydata['centric_diatom_ROIs']))  # small cells
@@ -92,6 +100,7 @@ zoodata_used.insert(2, 'daphnia_count/mL', ROI_0p5x(zoodata_used['daphnia_ROIs']
 zoodata_used.insert(4, 'ciliates_count/mL', ROI_5p0x(zoodata_used['ciliates_ROIs']))
 
 
+### Bio-area to biovolume
 def bioArea2Vol(Area):
     """
     Based on the scaling provided in Ryabov et al. (2021)
@@ -101,14 +110,23 @@ def bioArea2Vol(Area):
     v = ((1 / (10**0.25)) * Area) ** (1/0.68)              # calibrated
     return v
 
+### Ellipsoidal ciliates
+def Length2Vol(aa, bb, cc):
+    """
+    Calculting biovolume assuming ellipsoidal ciliates, following Hillebrand et al. (1999)
+    :param aa: minor axis length (μm)
+    :param bb: depth (μm)
+    :param cc: major axis length (μm)
+    :return: biovolume (μm3)
+    """
+    v = (np.pi/6) * aa * bb * cc
+    return v
 
-# calculate biovolume from area using the scaling function from Ryabov et al. (2021)
+
+### Deriving phytoplankton biomass
+# calculating the biovolume from area using the scaling function from Ryabov et al. (2021)
 for i in range(len(physpecies)):
     phydata.insert(1 + i, physpecies[i] + '_biov', bioArea2Vol(phydata[physpecies[i] + '_area_μm2']))
-
-for i in range(len(zoospecies_used)):
-    zoodata_used.insert(1 + i, zoospecies_used[i] + '_biov', bioArea2Vol(zoodata_used[zoospecies_used[i] + '_area_μm2']))
-
 
 def mwP_Ind(biov):
     """
@@ -138,23 +156,10 @@ def Phy_abun2biomass(biov, abun):
     µmolP_L = µmolP_ind * (abun * mL2L)
     return µmolP_L
 
+### Deriving zooplankton biomass
 
-def Daph_L_W_Schalau(MaL_mm):
-    """
-    Length-weight ratio for daphnia used in the model of Schalau et al. (2008) and sourced from Urabe and Watanabe (1991) & Lynch et al. (1986)
-    :param MaL_mm: Maximum Axis Length (mm)
-    :return: µmol P ind-1
-    """
-    mwC = 12.011
-    L = MaL_mm * 0.75                            # ref: Ranta et al. (1993); Karpowicz et al. (2020)
-    µgC_ind = 1.6 * (L**3)
-    µmolC_ind = µgC_ind / mwC           # convert to molar
-    C2P_ratio = 350  # the mean threshold elemental ratio (to maintain Daphnia growth - good reference for C:P)
-                               # a mean from Hessen (2006) - assuming redfield ratio for carbon to phosphate transformation -
-                               # but the range can vary between 80-385 for daphnia
-    µmolP_ind = µmolC_ind / C2P_ratio
-    return µmolP_ind
-
+# calculating the biovolume of ciliates
+zoodata_used.insert(1, 'ciliates_biov2', Length2Vol(zoodata_used['ciliates_MiL_μm'], zoodata_used['ciliates_MiL_μm']*(2/3), zoodata_used['ciliates_MaL_μm']))
 
 def CiliatePcontent_Putt(biov):
     """
@@ -171,6 +176,23 @@ def CiliatePcontent_Putt(biov):
     C2P_ratio = 100     # a mean from 80-120 of Golz et al. (2015) - assuming redfield ratio for carbon to phosphate transformation - but the range can vary between 80-300 for daphnia
     µmolP_ind = µmolC_ind / C2P_ratio
     return µmolP_ind
+  
+def Daph_L_W_Schalau(MaL_mm):
+    """
+    Length-weight ratio for daphnia used in the model of Schalau et al. (2008) and sourced from Urabe and Watanabe (1991) & Lynch et al. (1986)
+    :param MaL_mm: Maximum Axis Length (mm)
+    :return: µmol P ind-1
+    """
+    mwC = 12.011
+    L = MaL_mm * 0.75                            # ref: Ranta et al. (1993); Karpowicz et al. (2020)
+    µgC_ind = 1.6 * (L**3)
+    µmolC_ind = µgC_ind / mwC           # convert to molar
+    C2P_ratio = 350  # the mean threshold elemental ratio (to maintain Daphnia growth - good reference for C:P)
+                               # a mean from Hessen (2006) - assuming redfield ratio for carbon to phosphate transformation -
+                               # but the range can vary between 80-385 for daphnia
+    µmolP_ind = µmolC_ind / C2P_ratio
+    return µmolP_ind
+
 
 
 ## phytoplankton total biomasses
