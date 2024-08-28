@@ -28,9 +28,9 @@ phydata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
                    'chlorophytes_ROIs', 'chlorophytes_area_log10_mm2'])
 
 ## For zooplankton, we use major axis length and minor axis length for ciliates and major axis length for daphnia
-zoodata = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
-                      usecols=['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 'daphnia_MaL_mm', 'daphnia_MiL_mm',
-                               'ciliates_ROIs', 'ciliates_area_log10_mm2', 'ciliates_MaL_mm', 'ciliates_MiL_mm'])
+zoodata_used = pd.read_csv(wd + '/raw_NPdata.csv', sep=',',
+                           usecols=['date', 'daphnia_ROIs', 'daphnia_area_log10_mm2', 'daphnia_MaL_mm', 'daphnia_MiL_mm',
+                                    'ciliates_ROIs', 'ciliates_area_log10_mm2', 'ciliates_MaL_mm', 'ciliates_MiL_mm'])
 
 ## set name
 physpecies = ['dinobryon', 'uroglena', 'centric_diatom', 'cryptophyceae', 'rhodomonas', 'chlorophytes']
