@@ -5,15 +5,15 @@ Here stores:
 
 <br/><br/>
 A graphical illustration of the transformation of time-averaged phytoplankton data*: 
-<img width="500" alt="SuppFigS2_v3" src="https://github.com/user-attachments/assets/729094dd-d304-4b7a-b700-0e17413bea0e">
+<img width="500" alt="SuppFigS1_v2" src="https://github.com/user-attachments/assets/b71e8bd5-b732-4e3f-8e35-b1bc74b786b5">
 
-A graphical illustration of the transformation of time-averaged phytoplankton data*: 
-<img width="500" alt="SuppFigS3_v1" src="https://github.com/user-attachments/assets/654ab75e-9063-4c26-9842-9dd896dd588a">
+A graphical illustration of the transformation of time-averaged zooplankton data*: 
+<img width="500" alt="SuppFigS4_v2" src="https://github.com/user-attachments/assets/6a5e4ae1-7f55-4f1c-a465-bce8741c18f6">
 
 <br/><br/>
 ### A brief description:
 This model outputs phytoplankton and zooplankton biomasses for different size classes. This information allow us to produce 1.) total phytoplankton biomass(µM P); 2.) total zooplankton biomass(µM P) ; and 3.) community mean phytoplankton size(µm ESD).
-After the transformations, the common unit considered for comparing model outputs and data are: biomass(µM P); and biovolume(µm$^3$)
+After the transformations, the common unit considered for comparing model outputs and data are: biomass(µM P); and biovolume(µm3)
 
 
 <br/><br/><br/>
