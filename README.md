@@ -59,27 +59,6 @@ Using the standard model, we conduct two numerical experiments:<br/>
 
 For details, please refer to the related publication of this model (under review).
 
-<br/><br/>
-## Suggestions for future works
-The current model are structured flexibly and can be extended for future studies. Below are some options.
-<br/>
-1. Experiments on model hypothesis - How different assumptions on the temperature dependence of phytoplankton growth and zooplankton grazing would change the predictions on communities compositions of phytoplankton community?
-   e.g. Comparisons between:
-   - Eppley curve or Q10 model (Ho et al. 2013) versus thermal tolerance curve (Chen, 2022)
-   - Size-dependent Eppley curves (e.g. To et al. 2024)
-   - Community-averaged unimodal curve (Cagle and Roelke 2021; the present study)
-   - Size-dependent unimodal curve (due to be examined)
-
-2. Experiments on model hypothesis - mechanisms between temperature dependence and resource levels
-   - optimal growth temperature, $T_{opt}$, with nutrient levels (Bestion et al. 2018)
-   - optimal growth temperature, $T_{opt}$, with irradiance levels (Edwards et al. 2016)
-
-3. Numerical explorations on the relationships between phytoplankton size and thermal traits, e.g. $T_{opt}$,  $\sigma_{T}$
-   - What are the probable/observable range of parameters for such allometric relationships?
-
-4. Ecological explorations of altered stratification phenology in lakes (Woolway et al. 2021), for example,
-   - <img width="400" alt="Figure1_v2 1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/dc436e0b-0768-444d-87ff-6aafd7fa78ae">   
-
 
 <br/><br/><br/><br/><br/><br/>
 Reference:
