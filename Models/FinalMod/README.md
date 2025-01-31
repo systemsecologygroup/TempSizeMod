@@ -26,13 +26,13 @@ or if one wants to change the parameters that determine the allometric relations
 sol = SizeModLogspace(mld=mld_run, par=PAR_run, sst=LWST_run, dmdt=dmdt_run, N0=N0, numP=Pnum, numYears=Ynum, mu_alpha=0.25).solution
 ````
 
-The code for the parameters can be found in FinalMod_Sbm.py.
+The coding name for the parameters can be found in FinalMod_Sbm.py.
 
 
 
 <br/><br/>
 #### FinalMod_proj.py
-In this script one can run a number of projection sceanrios, i.e. linear increase in temperature, automatically.
+In this script one can run a number of projection sceanrios, i.e. linear (or, non-linear depending on the input forcing) increase in temperature.
 If one wants to configure the increase in temperature by their own preferred values, or adjust the number of scenarios, please change at the below line:
 ````
 temp_incr = [0, 1.4, 2.5, 4.2]
