@@ -55,7 +55,7 @@ We fine-tuned selected parameters against the time-averaged plankton data collec
 ## Experiments
 Using the standard model, we conduct two numerical experiments:<br/>
 1. a projection based on Representative Climate Pathways (RCPs) issued by IPCC
-2. a sensitivity test for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different RCP scenarios
+2. a sensitivity analysis for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different warming (i.e., RCP by IPCC) scenarios
 
 For details, please refer to the related publication of this model (under review).
 
