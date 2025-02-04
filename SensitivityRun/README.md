@@ -6,6 +6,9 @@ We vary the lake mixing dynamics for the worst climate change scenario of our pr
 <img width="874" alt="Sensit_mix" src="https://github.com/user-attachments/assets/9bbd84bd-fb41-4b2c-878d-d085eb515d14" />
 
 
+<br><br><br>
+The results are attached in this folder. More details can be found in the related publication of this work (See front page).
+
 
 <br><br><br>
 + Peeters, F., D. Straile, A. Lorke, and D. M. Livingstone. 2007. Earlier onset of the spring phytoplankton bloom in lakes of the temperate zone in a warmer climate. Global Change Biology 13: 1898–1909. doi:10.1111/j.1365-2486.2007.01412.x
