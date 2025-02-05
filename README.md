@@ -7,7 +7,9 @@ In the current realm of global environmental change, understanding the effects o
 Trait-based models are valuable tools to disentangle possible effects and test the possible mechanisms that water temperature has on phytoplankton (Litchman 2023). Phytoplankton cell size is a master trait and has been widely used in modelling work (Litchman and Klausmeier 2008). Size-based models allow explorations of aggregated community properties such as total biomass and community mean cell size of phytoplankton (e.g. Ward et al. 2012; Acevedo-Trejos et al. 2018; To et al. 2024). They are useful for understanding changes in the macroecological patterns of the phytoplankton community size compositions in response to changes in environmental conditions.
 <br/><br/>
 ## Model description
-The model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) model (_sensu_ Fasham et al., 1990; Post et al. 2024) incorporated into a size-based framework (e.g., Armstrong 1994; To et al. 2024). The model is differential equation-based and includes one nutrient source, phosphorus $PO_4^{3-}$, available for uptake by different phytoplankton size classes ($P_i$). The phytoplankton are subject to grazing by two zooplankton of different size groups ($Z_1$, $Z_2$). The growth of phytoplankton is limited by light and nutrients, and is scaled by temperature dependence. The detritus pool, $D$, collects the dead and ungrazed matters, followed by recharging the nutrient pool through remineralization processes.
+The model is adapted from the well-established Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) model (_sensu_ Fasham et al., 1990; Post et al. 2024) incorporated into a size-based framework (e.g., Armstrong 1994; To et al. 2024). The model is differential equation-based and includes one nutrient source, phosphorus $N$, available for uptake by different phytoplankton size classes ($A_i$). The phytoplankton are subject to grazing by two zooplankton of different size groups ($Z_1$, $Z_2$). The growth of phytoplankton is limited by light and nutrients, and is scaled by temperature dependence. The detritus pool, $D$, collects the dead and ungrazed matters, followed by recharging the nutrient pool through remineralization processes. 
+Phytoplankton growth and zooplankton grazing are size-dependent. The depth of the epilimnion is known as the mixed layer depth (MLD) and is seasonally varying. The blue arrows indicate ecological and biogeochemical processes (solid lines) and physical processes (dashed lines). Environmental forcing to this model is provided by in-situ observations of photosynthetically active radiations (PAR), mixed layer depth (MLD – an indicator of lake mixing), and water temperature (LWST) from Greifensee, Switzerland. To approximate real-world grazing, the grazed material is split into (1) a portion that is not ingested (due to sloppy feeding) and is immediately lost into detritus, (2) a portion that is ingested and assimilated by zooplankton, and (3) an additional portion that is not assimilated after being ingested and quickly excreted into nutrient. The loss of zooplankton to higher order predation is density-dependent and formulated as a quadratic function. We assume that the loss of nutrients from the epilimnion is recharged through changes in MLD by a constant nutrient source, $N_0$, from the hypolimnion. The value of $N_0$ is determined by adjusting the modelled nutrient dynamics with observations and is also prescribed as forcing to the model.
+
 
 <p align="center">
   <img width="720" alt="Figure1_v3" src="https://github.com/user-attachments/assets/4a14a86d-2ded-4cb8-a04b-1d7c4959f2fc">
@@ -27,7 +29,7 @@ where $T$ is the ambient lake water surface temperature (LWST), $T_{opt}$ is the
 
 The maximum ingestion rates of zooplankton follows a Q10 model such that, the maximum grazing increases with temperature. The equation for the dependence is,
 
-$$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}} $$.
+$$I_{max}(S_j^Z) \cdot Q_{10}^{\frac{T-T_{ref}}{10}}$$.
 
 <br/>
 The Q10 temperature coefficient here specifies the amount of maximum ingestion rate increases with a 10 $^{\circ}$ C temperature increase. It describes the sensitivity of zooplankton response to a higher temperature. $T$ refers to the lake temperature, while $T_{ref}$ refers to the reference temperature when the rate is equal to the baseline rate (i.e. no effects from temperature).
@@ -40,9 +42,10 @@ The allometric relationships considered in the model are:
 
 $$\mu_{max}(S_i^P) = \beta_{\mu_{max}}\cdot (S_i^P)^{\alpha_{\mu_{max}}}$$
 
-$$I_{max}(S_j^Z) = \beta_{I_{max}}\cdot (S_j^Z)^{\alpha_{I_{max}}}$$
+$$\psi_{max}(S_j^Z) = \beta_{I_{max}}\cdot (S_j^Z)^{\alpha_{\psi_{max}}}$$
 
 $$P_{opt}(S_i^P, S_j^Z) = \beta_{P_{opt}}\cdot (S_j^Z)^{\alpha_{P_{opt}}}$$
+
 <br/>
 representing, respectively, maximum growth rate, $\mu_{max}(S_i^P)$, for phytoplankton size class $i$, and maximum ingestion rate, $I_{max}(S_j^Z)$, and optimal prey size, $P_{opt}(S_i^P, S_j^Z)$, for zooplankton size class $j$.
 
@@ -55,30 +58,13 @@ We fine-tuned selected parameters against the time-averaged plankton data collec
 ## Experiments
 Using the standard model, we conduct two numerical experiments:<br/>
 1. a projection based on Representative Climate Pathways (RCPs) issued by IPCC
-2. a sensitivity test for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different RCP scenarios
+2. a sensitivity analysis for the two thermal traits, $T_{opt}$ and $\sigma_T$ in different warming (i.e., RCP by IPCC) scenarios
+
+## Supplementary tests
+- a sensitivity test for the model parameters for the standard model run
+- a sensitivity run for varying lake mixing parameters for the worst warming scenario
 
 For details, please refer to the related publication of this model (under review).
-
-<br/><br/>
-## Suggestions for future works
-The current model are structured flexibly and can be extended for future studies. Below are some options.
-<br/>
-1. Experiments on model hypothesis - How different assumptions on the temperature dependence of phytoplankton growth and zooplankton grazing would change the predictions on communities compositions of phytoplankton community?
-   e.g. Comparisons between:
-   - Eppley curve or Q10 model (Ho et al. 2013) versus thermal tolerance curve (Chen, 2022)
-   - Size-dependent Eppley curves (e.g. To et al. 2024)
-   - Community-averaged unimodal curve (Cagle and Roelke 2021; the present study)
-   - Size-dependent unimodal curve (due to be examined)
-
-2. Experiments on model hypothesis - mechanisms between temperature dependence and resource levels
-   - optimal growth temperature, $T_{opt}$, with nutrient levels (Bestion et al. 2018)
-   - optimal growth temperature, $T_{opt}$, with irradiance levels (Edwards et al. 2016)
-
-3. Numerical explorations on the relationships between phytoplankton size and thermal traits, e.g. $T_{opt}$,  $\sigma_{T}$
-   - What are the probable/observable range of parameters for such allometric relationships?
-
-4. Ecological explorations of altered stratification phenology in lakes (Woolway et al. 2021), for example,
-   - <img width="400" alt="Figure1_v2 1" src="https://github.com/Debbcwing/TempSizeMod/assets/51200142/dc436e0b-0768-444d-87ff-6aafd7fa78ae">   
 
 
 <br/><br/><br/><br/><br/><br/>
